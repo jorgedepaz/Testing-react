@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/styles.css";
 
 class Game extends React.Component{
-    constructor(){
+    constructor(props){
         super();
         this.state = {
             num1: 1,
@@ -25,10 +25,17 @@ class Game extends React.Component{
         return (
             <div class='container'>
                 <div class='content'>
-                    <div className = {this.state.incorrect ? "incorrect":""} id="problem">{this.state.num1}+{this.state.num2}</div>
-                    <input onKeyPress={this.inputKeyPress} onChange={this.updateResponse} value={this.state.response}/>
+                    <div 
+                        className = {this.state.incorrect ? "incorrect":""} 
+                        id="problem">{this.state.num1}+{this.state.num2}
+                    </div>
+                    <input 
+                        onKeyPress={this.inputKeyPress} 
+                        onChange={this.updateResponse} 
+                        value={this.state.response}
+                    />
                     <div><h2>Score:{this.state.score}</h2></div>
-                    <div><h1>Jugador: </h1></div>
+                    <div><h1>Jugador: {this.props.username}</h1></div>
                 </div>
             </div>
         )

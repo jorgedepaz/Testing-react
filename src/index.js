@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Welcome from "./components/welcome.jsx";
-//import Game from "./components/game.jsx";
+//import Welcome from "./components/welcome.jsx";
+import Game from "./components/game.jsx";
 
 
 const container = document.getElementById('root')
 
-ReactDOM.render(<Welcome />,container)
-//ReactDOM.render(<Game />,container)
+//ReactDOM.render(<Welcome />,container)
+ReactDOM.render(<Game username="testUser"/>,container)
 
 //codigo de create react
 // import React from 'react';
